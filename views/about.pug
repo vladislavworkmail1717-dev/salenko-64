@@ -1,0 +1,28 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon" href="/favicon.ico")
+    link(rel="stylesheet" href="/style.css")
+    title= title
+  body(class="theme-" + theme)
+    nav
+      a(href="/") Головна
+      a(href="/about") Про сайт (PUG)
+      a(href="/profile") Профіль
+      span.spacer
+      form.inline(method="POST" action="/theme")
+        select(name="theme" onchange="this.form.submit()")
+          each t in themes
+            option(value=t selected=(t === theme))= t
+      if user
+        span= user.username
+        a(href="/logout") Вийти
+      else
+        a(href="/login") Вхід
+        a(href="/register") Реєстрація
+    .container
+      h1 Про сайт (PUG)
+      p Ця сторінка згенерована за допомогою PUG.
+      p Favicon підключений через link(rel="icon" href="/favicon.ico").

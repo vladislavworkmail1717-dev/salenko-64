@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body class="theme-<%= theme %>">
+  <%- include('partials/nav') %>
+  <div class="container">
+    <h1>Вхід</h1>
+    <% if (error) { %><p class="error"><%= error %></p><% } %>
+    <form method="POST" action="/login">
+      <div><input name="username" placeholder="Логін" required></div>
+      <div><input name="password" type="password" placeholder="Пароль" required></div>
+      <button type="submit">Увійти</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body class="theme-<%= theme %>">
+  <%- include('partials/nav') %>
+  <div class="container">
+    <h1>Реєстрація</h1>
+    <% if (error) { %><p class="error"><%= error %></p><% } %>
+    <form method="POST" action="/register">
+      <div><input name="username" placeholder="Логін" required></div>
+      <div><input name="password" type="password" placeholder="Пароль (мін. 4 символи)" required></div>
+      <button type="submit">Зареєструватись</button>
+    </form>
+  </div>
+</body>
+</html>

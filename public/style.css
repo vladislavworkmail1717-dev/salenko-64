@@ -1,0 +1,20 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.container { max-width: 700px; margin: 0 auto; padding: 20px; }
+nav { padding: 12px 20px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+nav a { text-decoration: none; }
+nav .spacer { flex: 1; }
+form.inline { display: inline; }
+input, select, button { padding: 8px; margin: 4px 0; }
+.error { color: #d33; }
+
+body.theme-light { background: #ffffff; color: #222; }
+body.theme-light nav { background: #eee; }
+body.theme-light a { color: #0645ad; }
+
+body.theme-dark { background: #1e1e1e; color: #eee; }
+body.theme-dark nav { background: #333; }
+body.theme-dark a { color: #8ab4f8; }
+
+body.theme-blue { background: #e6f0ff; color: #0b2a55; }
+body.theme-blue nav { background: #bcd4ff; }
+body.theme-blue a { color: #0b3d91; }

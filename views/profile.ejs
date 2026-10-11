@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body class="theme-<%= theme %>">
+  <%- include('partials/nav') %>
+  <div class="container">
+    <h1>Профіль (захищена сторінка)</h1>
+    <p>Привіт, <b><%= user.username %></b>! ID: <%= user.id %></p>
+    <p>Ви бачите цю сторінку, бо JWT у httpOnly cookie валідний.</p>
+  </div>
+</body>
+</html>

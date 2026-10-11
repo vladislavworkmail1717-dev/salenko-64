@@ -1,0 +1,21 @@
+<nav>
+  <a href="/">Головна</a>
+  <a href="/about">Про сайт (PUG)</a>
+  <a href="/profile">Профіль</a>
+  <span class="spacer"></span>
+  <form class="inline" method="POST" action="/theme">
+    <select name="theme" onchange="this.form.submit()">
+      <% themes.forEach(function (t) { %>
+        <option value="<%= t %>" <%= t === theme ? 'selected' : '' %>><%= t %></option>
+      <% }) %>
+    </select>
+    <noscript><button>OK</button></noscript>
+  </form>
+  <% if (user) { %>
+    <span><%= user.username %></span>
+    <a href="/logout">Вийти</a>
+  <% } else { %>
+    <a href="/login">Вхід</a>
+    <a href="/register">Реєстрація</a>
+  <% } %>
+</nav>
